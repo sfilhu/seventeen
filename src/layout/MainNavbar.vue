@@ -1,29 +1,50 @@
 <template>
   <navbar
     position="fixed"
-    type="primary"
+    type="danger"
     :transparent="transparent"
     :color-on-scroll="colorOnScroll"
     menu-classes="ml-auto"
   >
     <template>
       <router-link v-popover:popover1 class="navbar-brand" to="/">
-        Now Ui Kit
+        <!-- Seventeen -->
+        <span style="font-family: 'Baloo Tamma 2', cursive; font-size: 30px"
+          >S</span
+        >
       </router-link>
-      <el-popover
-        ref="popover1"
-        popper-class="popover"
-        placement="bottom"
-        width="200"
-        trigger="hover"
-      >
-        <div class="popover-body">
-          Designed by Invision. Coded by Creative Tim
-        </div>
-      </el-popover>
     </template>
     <template slot="navbar-menu">
       <li class="nav-item">
+        <a class="nav-link" href="#about">
+          <p>Sobre</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#cases">
+          <p>Cases</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#clients">
+          <p>Clientes</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#services">
+          <p>Serviços</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">
+          <p>Contato</p>
+        </a>
+      </li>
+      <!-- <li class="nav-item">
         <a
           class="nav-link"
           href="https://www.creative-tim.com/product/vue-now-ui-kit"
@@ -51,10 +72,10 @@
         </a>
       </drop-down>
       <drop-down
-              tag="li"
-              title="Examples"
-              icon="now-ui-icons design_image"
-              class="nav-item"
+        tag="li"
+        title="Examples"
+        icon="now-ui-icons design_image"
+        class="nav-item"
       >
         <nav-link to="/landing">
           <i class="now-ui-icons education_paper"></i> Landing
@@ -75,7 +96,7 @@
           <i class="now-ui-icons arrows-1_share-66"></i>
           <p>Upgrade to PRO</p>
         </a>
-      </li>
+      </li> -->
 
       <li class="nav-item">
         <a
@@ -121,20 +142,19 @@
 </template>
 
 <script>
-import { DropDown, Navbar, NavLink } from '@/components';
-import { Popover } from 'element-ui';
+// import { DropDown, Navbar, NavLink } from "@/components";
+import { Navbar } from "@/components";
+import { Popover } from "element-ui";
 export default {
-  name: 'main-navbar',
+  name: "main-navbar",
   props: {
     transparent: Boolean,
-    colorOnScroll: Number
+    colorOnScroll: Number,
   },
   components: {
-    DropDown,
     Navbar,
-    NavLink,
-    [Popover.name]: Popover
-  }
+    [Popover.name]: Popover,
+  },
 };
 </script>
 

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Index from './pages/Index.vue';
+import Documentation from './pages/Documentation.vue';
 import Landing from './pages/Landing.vue';
 import Login from './pages/Login.vue';
 import Profile from './pages/Profile.vue';
@@ -16,6 +17,15 @@ export default new Router({
       path: '/',
       name: 'index',
       components: { default: Index, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: 'black' }
+      }
+    },
+    {
+      path: '/doc',
+      name: 'documentation',
+      components: { default: Documentation, header: MainNavbar, footer: MainFooter },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: 'black' }
@@ -49,6 +59,7 @@ export default new Router({
     }
   ],
   scrollBehavior: to => {
+    console.log(to.hash);
     if (to.hash) {
       return { selector: to.hash };
     } else {
