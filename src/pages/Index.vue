@@ -1,11 +1,7 @@
 <template>
   <div>
     <div class="page-header clear-filter" filter-color="orange">
-      <parallax
-        class="page-header-image"
-        style="background-image: url('img/header.jpg')"
-      >
-      </parallax>
+      <parallax class="page-header-image" :style="bg"> </parallax>
       <div class="container">
         <div class="content-center brand">
           <!-- <img class="n-logo" src="img/now-logo.png" alt="" /> -->
@@ -21,6 +17,7 @@
     <Cases />
     <Clients />
     <Services />
+    <Team />
     <Contact />
   </div>
 </template>
@@ -29,6 +26,7 @@ import { Parallax } from "@/components";
 import About from "./About";
 import Cases from "./Cases";
 import Clients from "./Clients";
+import Team from "./Team";
 import Contact from "./Contact";
 import Services from "./Services";
 // import Navigation from "./components/Navigation";
@@ -53,6 +51,7 @@ export default {
     Clients,
     Contact,
     Services,
+    Team,
     // Navigation,
     // TabsSection,
     // ProgressPagination,
@@ -64,6 +63,14 @@ export default {
     // SignupForm,
     // ExamplesSection,
     // DownloadSection,
+  },
+  data: () => ({}),
+  computed: {
+    bg() {
+      return "background-image: url('img/bg.jpg')";
+      // ? "background-image: url('img/bg.jpg')"
+      // : "background-image: url('img/bg.jpg')";
+    },
   },
 };
 </script>

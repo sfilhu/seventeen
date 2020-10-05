@@ -1,8 +1,8 @@
 section {
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
     &.pt-50 {
-        padding-top: 80px;
+        padding-top: 8%;
     }
     h1 {
         text-align: center;
@@ -23,9 +23,10 @@ section {
 .section{
     padding: 70px 0;
     position: relative;
-    background: $white-color;
+    background: $black-color;
+    color: $white-color;
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
     .row + .category{
         margin-top: $margin-base-vertical;
     }

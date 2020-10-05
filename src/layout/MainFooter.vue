@@ -5,7 +5,7 @@
     :data-background-color="backgroundColor"
   >
     <div class="container">
-      <nav>
+      <!-- <nav>
         <ul>
           <li>
             <a href="https://www.creative-tim.com">
@@ -23,8 +23,8 @@
             </a>
           </li>
         </ul>
-      </nav>
-      <div class="copyright">
+      </nav> -->
+      <!-- <div class="copyright">
         &copy; {{ year }}, Designed by
         <a href="https:///www.invisionapp.com" target="_blank" rel="noopener"
           >Invision</a
@@ -36,7 +36,7 @@
         <a href="https://www.creative-tim.com" target="_blank" rel="noopener"
           >Creative Tim</a
         >.
-      </div>
+      </div> -->
     </div>
   </footer>
 </template>
@@ -44,13 +44,13 @@
 export default {
   props: {
     backgroundColor: String,
-    type: String
+    type: String,
   },
   data() {
     return {
-      year: new Date().getFullYear()
+      year: new Date().getFullYear(),
     };
-  }
+  },
 };
 </script>
 <style></style>

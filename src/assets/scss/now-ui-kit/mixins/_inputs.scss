@@ -57,7 +57,7 @@
         }
 
         .input-group-text{
-            padding: $padding-vertical - 1 0 $padding-vertical $padding-horizontal - 1;
+            padding: $padding-vertical - 1  $padding-horizontal - 1 $padding-vertical $padding-horizontal - 1;
 
             & + .form-control{
                 padding: $padding-vertical  $padding-horizontal - 1 $padding-vertical $padding-horizontal - 3;
