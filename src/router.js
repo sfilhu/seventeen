@@ -59,7 +59,6 @@ export default new Router({
     }
   ],
   scrollBehavior: to => {
-    console.log(to.hash);
     if (to.hash) {
       return { selector: to.hash };
     } else {
